@@ -1,18 +1,24 @@
 export const blogPosts = [
   {
     id: 1,
-    titre: "Les nouveautés de l'IA en 2026",
-    extrait: "L'intelligence artificielle transforme nos outils de travail.",
-    contenu: "Cette année, l'IA est devenue indispensable pour chaque développeur...",
-    image: "/ia.jpg",
-    date: "2026-06-20"
+    titre: "Guide d'achat : Choisir le meilleur PC portable en 2026",
+    extrait: "Découvrez les critères essentiels pour bien choisir votre machine selon vos besoins.",
+    
+    image: "/pc-guide.jpg", 
+    date: "2026-06-22"
   },
   {
     id: 2,
-    titre: "Pourquoi choisir Next.js ?",
-    extrait: "Les avantages de React et Next.js pour vos projets.",
-    contenu: "Next.js offre une expérience de développement incroyable...",
-    image: "/nextjs.jpeg",
-    date: "2026-06-21"
+    titre: "Setup Gaming : Les accessoires indispensables",
+    extrait: "Créez l'environnement de jeu parfait avec notre sélection d'équipements.",
+    image: "/gaming-setup.jpg",
+    date: "2026-06-23"
+  },
+  {
+    id: 3,
+    titre: "Smartphone : Top 5 des modèles de l'année",
+    extrait: "Les meilleurs smartphones du marché testés pour vous.",
+    image: "/smartphone.jpg",
+    date: "2026-06-24"
   }
 ];

@@ -12,7 +12,7 @@ export default async function DetailProduit({ params }) {
     <div className="container mx-auto p-8">
       <div className="flex flex-col md:flex-row gap-8 items-center">
         
-        {/* Ajout de la balise image ici */}
+        
         <div className="w-full md:w-1/2">
           <img 
             src={produit.image} 
