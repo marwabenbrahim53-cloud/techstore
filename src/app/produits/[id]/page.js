@@ -1,46 +1,32 @@
-import { produits } from "../../../data/produits";
+// Assurez-vous d'importer vos produits
+import { produits } from "../../../data/produits"; 
+import AddToCartButton from "../../../components/AddToCartButton";
 
 export default async function DetailProduit({ params }) {
-  // Récupération de l'id depuis les paramètres de l'URL
   const { id } = await params;
-  
-  // Recherche du produit correspondant
   const produit = produits.find((p) => p.id.toString() === id.toString());
 
-  if (!produit) {
-    return (
-      <div className="text-center mt-20 text-xl font-bold">
-        Produit non trouvé !
-      </div>
-    );
-  }
+  if (!produit) return <div className="text-center mt-20">Produit non trouvé !</div>;
 
   return (
     <div className="container mx-auto p-8">
-      <div className="grid md:grid-cols-2 gap-10 items-center">
+      <div className="flex flex-col md:flex-row gap-8 items-center">
         
-        {/* Image du produit */}
-        <div className="w-full">
+        {/* Ajout de la balise image ici */}
+        <div className="w-full md:w-1/2">
           <img 
             src={produit.image} 
             alt={produit.nom} 
-            className="w-full h-auto rounded-2xl shadow-lg" 
+            className="w-full h-auto rounded-lg shadow-md"
           />
         </div>
-        
+
         {/* Détails du produit */}
-        <div>
+        <div className="w-full md:w-1/2">
           <h1 className="text-4xl font-bold mb-4">{produit.nom}</h1>
-          <p className="text-gray-600 text-lg mb-6 leading-relaxed">
-            {produit.description}
-          </p>
-          <p className="text-3xl font-bold text-blue-600 mb-6">
-            {produit.prix} DT
-          </p>
+          <p className="text-xl text-gray-700 mb-6">{produit.prix} DT</p>
           
-          <button className="bg-black text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition">
-            Ajouter au panier
-          </button>
+          <AddToCartButton produit={produit} />
         </div>
       </div>
     </div>
