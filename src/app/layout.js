@@ -1,5 +1,4 @@
-import Header from '../components/Header';
-import NavBar from '../components/NavBar';
+import Header from '../components/Header'; // خلي هذا برك
 import Footer from '../components/Footer';
 import { CartProvider } from "../context/CartContext"; 
 import "./globals.css";
@@ -14,8 +13,8 @@ export default function RootLayout({ children }) {
     <html lang="fr">
       <body>
         <CartProvider>
-          <Header />
-          <NavBar />
+          <Header /> 
+          {/* فسخت الـ NavBar من هنا! */}
           <main>{children}</main> 
           <Footer />
         </CartProvider>
